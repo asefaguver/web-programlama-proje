@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmet sefa\\Desktop\\örnek kodlar\\Web Programlama\\CoreProje\\CoreProje\\CoreProje.csproj",
+      "projectUniqueName": "C:\\Users\\ahmet sefa\\Desktop\\örnek kodlar\\Web Programlama\\WebProje\\web-programlama-proje\\CoreProje\\CoreProje\\CoreProje.csproj",
       "projectName": "CoreProje",
-      "projectPath": "C:\\Users\\ahmet sefa\\Desktop\\örnek kodlar\\Web Programlama\\CoreProje\\CoreProje\\CoreProje.csproj",
+      "projectPath": "C:\\Users\\ahmet sefa\\Desktop\\örnek kodlar\\Web Programlama\\WebProje\\web-programlama-proje\\CoreProje\\CoreProje\\CoreProje.csproj",
       "packagesPath": "C:\\Users\\ahmet sefa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmet sefa\\Desktop\\örnek kodlar\\Web Programlama\\CoreProje\\CoreProje\\obj\\",
+      "outputPath": "C:\\Users\\ahmet sefa\\Desktop\\örnek kodlar\\Web Programlama\\WebProje\\web-programlama-proje\\CoreProje\\CoreProje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmet sefa\\AppData\\Roaming\\NuGet\\NuGet.Config",
