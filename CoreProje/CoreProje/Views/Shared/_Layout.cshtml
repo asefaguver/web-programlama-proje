@@ -30,13 +30,13 @@
                 <div class="row">
                     <div class="col-md-4 hidden-sm col-sm-12">
                         <div class="call-info">
-                            <p class="call-text">Any Question? Call Us:<strong>252-386-7004</strong></p>
+                            <p class="call-text">Any Question? Call Us:<strong>543-345-6211</strong></p>
                         </div>
                     </div>
                     <div class="col-md-8 hidden-sm hidden-xs">
                         <div class="social">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -52,14 +52,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-md-2 col-sm-12 col-xs-12">
-                            <a href="index.html"><img src="images/logo.png" alt="Tour and Travel Agency - Responsive Website Template"></a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="images/logo.png" alt="Tour and Travel Agency - Responsive Website Template"></a>
                         </div>
                         <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
                             <div class="navigation">
                                 <div id="navigation">
                                     <ul>
-                                        <li class="active"><a href="index.html" title="Home">Home</a></li>
-                                        <li><a href="about.html" title="About us">About us</a> </li>
+                                        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                        <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> </li>
                                         <li class="has-sub">
                                             <a href="tours.html" title="Tours">Tours</a>
                                             <ul>
@@ -88,9 +88,10 @@
 
     </header>
 
-    <div class="container">
+    @*<div class="container">
         @RenderBody()
-    </div>
+    </div>*@
+    @RenderBody()
 
     <!-- footer start -->
     <div class="footer">
