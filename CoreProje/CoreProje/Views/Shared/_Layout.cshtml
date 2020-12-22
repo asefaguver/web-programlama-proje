@@ -52,19 +52,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-md-2 col-sm-12 col-xs-12">
-                            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="images/logo.png" alt="Tour and Travel Agency - Responsive Website Template"></a>
+                            <a href="/Home/Index"><img src="/images/logo.png" alt="Tour and Travel Agency - Responsive Website Template"></a>
                         </div>
                         <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
                             <div class="navigation">
                                 <div id="navigation">
                                     <ul>
-                                        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                        <li class="active"><a href="/Home/Index">Home</a></li>
                                         <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> </li>
                                         <li class="has-sub">
-                                            <a href="tours.html" title="Tours">Tours</a>
+                                            <a asp-area="" asp-controller="Home" asp-action="Tours">Tours</a>
                                             <ul>
-                                                <li><a href="domestic-tour.html" title="Group Tours">Domestic Tours</a></li>
-                                                <li><a href="international-tour.html" title="Couple Tours">International Tours</a></li>
+                                                <li><a href="domestic-tour.html" title="Europe Tours">Europe Tours</a></li>
+                                                <li><a href="international-tour.html" title="America Tours">America Tours</a></li>
+                                                <li><a href="domestic-tour.html" title="Asia Tours">Asia Tours</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-sub">
@@ -74,7 +75,6 @@
                                                 <li><a href="blog-single.html" title="Blog Single ">Blog Single</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="testimonials.html" title="Testimonials">Testimonials</a>
                                         <li><a href="contact-us.html" title="Contact Us">Contact Us</a> </li>
                                         <li><a href="styleguide.html" title="Styleguide">styleguide</a> </li>
                                     </ul>
