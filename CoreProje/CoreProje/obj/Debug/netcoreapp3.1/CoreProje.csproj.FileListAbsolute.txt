@@ -55,7 +55,6 @@ C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programla
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.TagHelpers.output.cache
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.RazorCoreGenerate.cache
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -146,3 +145,4 @@ C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programla
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.csproj.CoreCompileInputs.cache
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Tours.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Category.cshtml.g.cs
