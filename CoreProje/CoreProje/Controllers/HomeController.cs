@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CoreProje.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoreProje.Controllers
 {
@@ -13,9 +14,12 @@ namespace CoreProje.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        BlogdbContext c = new BlogdbContext();
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            
         }
 
         public IActionResult Index()
@@ -25,7 +29,8 @@ namespace CoreProje.Controllers
 
         public IActionResult Category()
         {
-            return View();
+            var degerler = c.Kategoris.ToList();
+            return View(degerler);
         }
         public IActionResult Tours()
         {

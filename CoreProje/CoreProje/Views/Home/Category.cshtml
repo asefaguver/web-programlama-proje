@@ -1,25 +1,57 @@
-﻿@{
+﻿@using CoreProje.Models
+@model List<Kategori>  
+
+@{
     ViewData["Title"] = "Category";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<button type="button" class="btn btn-primary">Kategori Ekle</button>
-
-
-<div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Kategori ID</th>
+                    <th scope="col">Kategori Adi</th>
+                </tr>
+            </thead>
+            @foreach (var x in Model)
+            {
+                <tbody>
+                    <tr>
+                        <th scope="row">@x.KategoriId</th>
+                        <td>@x.KategoriAdi</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <!-- service start -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="service-block">
+                <div class="service-img">
+                    <a href="#"><img src="images/service-img-1.jpg" alt="Tour and Travel Agency - Responsive Website Template"></a>
+                </div>
+                <div class="service-content">
+                    <h3><a href="#" class="title">Group Tour</a></h3>
+                    <p>Scelerisque vitae velit e llamcorper plvinar esras sit amet odio et dolor por bibendum sit amet neceros.</p>
+                    <div class="service-btn-link"><a href="domestic-tour.html" class="btn-link">Yurtdışı Gezileri</a></div>
+                    <button type="button" class="btn btn-primary">Yurtdışı Gezileri</button>
+                </div>
             </div>
         </div>
+        <!-- service close -->
+        <!-- service start -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="service-block">
+                <div class="service-img">
+                    <a href="#"><img src="images/service-img-2.jpg" alt="Tour and Travel Agency - Responsive Website Template"></a>
+                </div>
+                <div class="service-content">
+                    <h3><a href="#" class="title">Couple Tour</a></h3>
+                    <p>Pellentesque bibendum, ante et ornare viverra, ex neque lorem ipusm dtium vestibulum eros ut lacinia.</p>
+                    <div class="service-btn-link"><a href="domestic-tour.html" class="btn-link">Yurtiçi Gezileri</a></div>
+                    <button type="button" class="btn btn-primary">Yurtiçi Gezileri</button>
+                </div>
+            </div>
+        </div>
+        <!-- service close -->
     </div>
-</div>
