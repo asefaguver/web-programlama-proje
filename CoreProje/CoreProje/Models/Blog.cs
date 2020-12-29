@@ -11,6 +11,7 @@ namespace CoreProje.Models
         public int? KategoriId { get; set; }
         public string Baslik { get; set; }
         public int? AdminId { get; set; }
+        public string Icerik { get; set; }
 
         public virtual Admin Admin { get; set; }
         public virtual Kategori Kategori { get; set; }

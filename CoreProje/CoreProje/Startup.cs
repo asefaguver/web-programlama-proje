@@ -26,6 +26,7 @@ namespace CoreProje
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSession();
             var connection = @"Server=DESKTOP-9B0C2CB; Database=Blogdb; Trusted_Connection=True;";
         }
 
@@ -48,6 +49,8 @@ namespace CoreProje
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

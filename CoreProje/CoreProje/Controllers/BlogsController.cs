@@ -11,7 +11,6 @@ namespace CoreProje.Controllers
 {
     public class BlogsController : Controller
     {
-        //private readonly BlogdbContext _context;
 
         public BlogdbContext _context = new BlogdbContext();
 
@@ -55,7 +54,7 @@ namespace CoreProje.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BlogId,KategoriId,Baslik,AdminId")] Blog blog)
+        public async Task<IActionResult> Create([Bind("BlogId,KategoriId,Baslik,AdminId,Icerik")] Blog blog)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +90,7 @@ namespace CoreProje.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BlogId,KategoriId,Baslik,AdminId")] Blog blog)
+        public async Task<IActionResult> Edit(int id, [Bind("BlogId,KategoriId,Baslik,AdminId,Icerik")] Blog blog)
         {
             if (id != blog.BlogId)
             {

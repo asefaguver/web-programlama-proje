@@ -32,10 +32,10 @@
                 @Html.DisplayFor(modelItem => item.Baslik)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Admin.AdminId)
+                @Html.DisplayFor(modelItem => item.Admin.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Kategori.KategoriId)
+                @Html.DisplayFor(modelItem => item.Kategori.KategoriAdi)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.BlogId">Edit</a> |

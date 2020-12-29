@@ -21,31 +21,25 @@
             @Html.DisplayNameFor(model => model.Admin)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Admin.AdminId)
+            @Html.DisplayFor(model => model.Admin.Email)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Kategori)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Kategori.KategoriId)
+            @Html.DisplayFor(model => model.Kategori.KategoriAdi)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Icerik)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Icerik)
+        </dd>
+
     </dl>
 </div>
 <div>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Cras elementum, metus in tristique rhoncus, ex lectus feugiat lacus, ac auctor nibh risus non quam. Ut venenatis mi nec purus rutrum, in facilisis enim molestie. 
-        Phasellus vehicula commodo lorem nec fringilla. Mauris est libero, eleifend vel cursus at, eleifend eget orci. Aliquam faucibus diam odio, et finibus odio tincidunt quis. 
-        Sed ultrices vel massa id vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus eget justo at aliquet. Suspendisse potenti. 
-        Suspendisse sed pretium nisl. Cras hendrerit lorem nulla, dignissim dignissim leo faucibus at. Nullam posuere mauris in sapien ultricies, eu cursus eros elementum.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum, metus in tristique rhoncus, ex lectus feugiat lacus, ac auctor nibh risus non quam. 
-        Ut venenatis mi nec purus rutrum, in facilisis enim molestie. Phasellus vehicula commodo lorem nec fringilla. Mauris est libero, eleifend vel cursus at, eleifend eget orci.
-        Aliquam faucibus diam odio, et finibus odio tincidunt quis. Sed ultrices vel massa id vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed dapibus eget justo at aliquet. Suspendisse potenti. 
-        Suspendisse sed pretium nisl. Cras hendrerit lorem nulla, dignissim dignissim leo faucibus at. Nullam posuere mauris in sapien ultricies, eu cursus eros elementum.
-    </p>
+
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.BlogId">Edit</a> |

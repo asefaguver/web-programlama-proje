@@ -1,0 +1,40 @@
+﻿@using CoreProje.Models
+@model IEnumerable<CoreProje.Models.Admin>
+
+@{
+    ViewData["Title"] = "Login";
+
+    Layout = null;
+}
+    <link href="~/css/login-css.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6c7bb4439b.js" crossorigin="anonymous"></script>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Sign In </h2>
+        <h2 class="inactive underlineHover">Sign Up </h2>
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <i class="fas fa-hiking fa-5x"></i>
+            <br />
+        </div>
+        <p style="color:#ff0000">@ViewBag.Uyari</p>
+        <!-- Login Form -->
+        <form action="/Admins/Login" method="post">
+            <input type="text" id="login" class="fadeIn second" name="Email" placeholder="E-mail">
+            <input type="password" id="password" class="fadeIn third" name="Password" placeholder="Password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+            @*<a href="/Admins/Index"><input type="submit" class="fadeIn fourth" value="Log In"></a>*@
+            @*<input type="submit" class="fadeIn fourth" value="Log In">*@
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
+
