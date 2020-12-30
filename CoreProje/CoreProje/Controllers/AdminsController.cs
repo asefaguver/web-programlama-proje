@@ -48,6 +48,8 @@ namespace CoreProje.Controllers
             var login =  _context.Admins.Where(x => x.Email == Email && x.Password==Password).FirstOrDefault();
             if (login != null)/*login.Email == Email && login.Password == Password*/
             {
+                if(login.Yetki==null)
+                    login.Yetki = "pasif";
                 //HttpContext.Session["AdminId"] = login.AdminId;
                 HttpContext.Session.SetInt32("AdminId", login.AdminId);
                 HttpContext.Session.SetString("Email", login.Email);
@@ -66,6 +68,24 @@ namespace CoreProje.Controllers
             //}
             //HttpContext.Session.SetInt32("id", author.AdminId);
             //return RedirectToAction(nameof(Index));
+        }
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> SignUp([Bind("Email,Password,AdminId")] Admin model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _context.AddAsync(model);
+                
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Login");
+
+            }
+            return View(model);
         }
         public IActionResult Logout()
         {

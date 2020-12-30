@@ -9,8 +9,9 @@
         <h2>Edit Blog</h2>
         <hr />
         <div class="row">
-            <div class="col-md-4">
-                <form asp-action="Edit">
+            
+            <form asp-action="Edit">
+                <div class="col-md-4">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="BlogId" />
                     <div class="form-group">
@@ -28,14 +29,16 @@
                         <select asp-for="AdminId" class="form-control" asp-items="ViewBag.AdminId"></select>
                         <span asp-validation-for="AdminId" class="text-danger"></span>
                     </div>
-                </form>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="Icerik" class="control-label"></label>
-                    <textarea asp-for="Icerik" class="form-control" rows="6" style="margin: 0px -2px 10px 0px; width: 700px; height: 250px;"></textarea>
-                    <span asp-validation-for="Icerik" class="text-danger"></span>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Icerik" class="control-label"></label>
+                        <textarea asp-for="Icerik" class="form-control" rows="6" style="margin: 0px -2px 10px 0px; width: 700px; height: 250px;"></textarea>
+                        <span asp-validation-for="Icerik" class="text-danger"></span>
+                    </div>
+            </form>
+            
+            
 
                 <div class="form-group">
                     <input type="submit" value="Save" class="btn btn-default" />

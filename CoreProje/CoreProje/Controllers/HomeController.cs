@@ -24,9 +24,21 @@ namespace CoreProje.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var list = c.Blogs.ToList();
+            foreach(var blog in list)
+            {
+                blog.Admin = c.Admins.Find(blog.AdminId);
+            }
+            return View(list);
         }
+        public IActionResult Post(int? Id)
+        {           
 
+            var blog = c.Blogs.Find(Id);
+            blog.Admin = c.Admins.Find(blog.AdminId);
+           
+            return View(blog);
+        }
         public IActionResult Category()
         {
             var degerler = c.Kategoris.ToList();

@@ -3,7 +3,7 @@
 @{
     int? AdminId = Context.Session.GetInt32("AdminId");
     string AdminYetki = Context.Session.GetString("Yetki");
-    if (!AdminId.HasValue)   // eğer adminin yetkisivarsa ve bilgileri doğruysa siteye girer
+    if (!AdminId.HasValue)   // eğer adminin yetkisi varsa ve bilgileri doğruysa siteye girer
     {
         Context.Response.Redirect("/Admins/Login");
     }
@@ -72,25 +72,20 @@
                                         <li class="active"><a href="/Home/Index">Home</a></li>
                                         @if (AdminYetki == "aktif")
                                         {
-                                            <li><a asp-area="" asp-controller="Home" asp-action="Category">Category</a> </li>
-                                            <li><a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a> </li>
-                                            <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blog</a> </li>
-
+                                            <li class="has-sub">
+                                            <a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
+                                            <ul>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="Category">Category</a> </li>
+                                                <li><a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a></li>
+                                                <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blog</a> </li>
+                                            </ul>
+                                            </li>
                                         }
-
                                         <li class="has-sub">
                                             <a asp-area="" asp-controller="Home" asp-action="Tours">Tours</a>
                                             <ul>
-                                                <li><a href="domestic-tour.html" title="Europe Tours">Europe Tours</a></li>
-                                                <li><a href="international-tour.html" title="America Tours">America Tours</a></li>
-                                                <li><a href="domestic-tour.html" title="Asia Tours">Asia Tours</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub">
-                                            <a href="blog-default.html" title="Blog ">Boş</a>
-                                            <ul>
-                                                <li><a href="blog-default.html" title="Blog">Blog Default</a></li>
-                                                <li><a href="blog-single.html" title="Blog Single ">Blog Single</a></li>
+                                                <li><a href="domestic-tour.html" title="Europe Tours">Yurtiçinde Gezilecek Yerler</a></li>
+                                                <li><a href="international-tour.html" title="America Tours">Yurdışında Gezilecek Yerler</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact-us.html" title="Contact Us">Contact Us</a> </li>

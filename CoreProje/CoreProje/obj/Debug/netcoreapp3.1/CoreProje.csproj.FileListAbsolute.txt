@@ -219,3 +219,5 @@ C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programla
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Blogs\Edit.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Blogs\Index.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Admins\Login.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Post.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Admins\SignUp.cshtml.g.cs

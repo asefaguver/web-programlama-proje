@@ -1,6 +1,10 @@
-﻿@{
+﻿@using CoreProje.Models
+@model IEnumerable<CoreProje.Models.Blog>
+
+@{
     ViewData["Title"] = "Home Page";
 }
+<link href="~/css/style.css" rel="stylesheet">
 
 <!-- hero-section start -->
 <div class="hero-section">
@@ -9,7 +13,7 @@
             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                 <div class="hero-section-caption pinside40">
                     <h1 class="hero-title">Discover The Places You’ve Never Been Before</h1>
-                    <a href="/Blogs/Index" class="btn btn-primary ">view blogs</a>
+                    <a href="/Home/Tours" class="btn btn-primary ">view blogs</a>
                 </div>
             </div>
         </div>
@@ -27,36 +31,58 @@
             </div>
         </div>
         <div class="row">
-            <!-- destination-one-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="destination-img">
-                    <a href="#" class="imghover"><img src="/images/destination-1.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
+            @foreach (var item in Model)
+            {
+                <!-- destination-one-start -->
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="destination-img">
+                        <a a asp-action="Post" asp-route-id="@item.BlogId" class="imghover">
+                            <img src="/images/destination-1.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="destination-content">
+                        <h3>
+                            <a asp-action="Post" asp-route-id="@item.BlogId" class="destination-title">
+                                @item.Baslik
+                            </a>
+                        </h3>
+                    </div>
                 </div>
-                <div class="destination-content">
-                    <h3><a href="/Home/Privacy" class="destination-title">Singapore</a></h3>
-                </div>
-            </div>
-            <!-- destination-one-close -->
+                <!-- destination-one-close -->
+            }
             <!-- destination-two-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="destination-img imghover">
-                    <a href="#" class="imghover"><img src="/images/destination-2.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                </div>
-                <div class="destination-content">
-                    <h3><a href="#" class="destination-title">Greece</a></h3>
-                </div>
-            </div>
+            @*<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="destination-img imghover">
+                        <a href="#" class="imghover"><img src="/images/destination-2.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
+                    </div>
+                    <div class="destination-content">
+                        <h3><a href="#" class="destination-title">Singapr</a></h3>
+                    </div>
+                </div>*@
             <!-- destination-two-close -->
             <!-- destination-three-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="destination-img imghover">
-                    <a href="#"><img src="/images/destination-3.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                </div>
-                <div class="destination-content">
-                    <h3><a href="#" class="destination-title">Thailand</a></h3>
-                </div>
-            </div>
+            @*<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="destination-img imghover">
+                        <a href="#"><img src="/images/destination-3.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
+                    </div>
+                    <div class="destination-content">
+                        <h3><a href="#" class="destination-title">Thailand</a></h3>
+                    </div>
+                </div>*@
             <!-- destination-three-close -->
         </div>
+        @*<table class="table">
+                <thead></thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <a asp-action="Post" asp-route-id="@item.BlogId">
+                            <p>@item.Baslik</p>
+                            <p>@item.Admin.Email</p>
+                        </a>
+                    }
+                </tbody>
+            </table>*@
+
     </div>
 </div>
