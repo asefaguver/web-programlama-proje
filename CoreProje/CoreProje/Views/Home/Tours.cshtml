@@ -1,4 +1,6 @@
-﻿
+﻿@using CoreProje.Models
+@model IEnumerable<CoreProje.Models.Blog>
+
 @{
     ViewData["Title"] = "Tours";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +13,7 @@
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                 <div class="page-section">
-                    <h1 class="page-title" style="background-color:#0026ff">Blog</h1>
+                    <h1 class="page-title">Blog</h1>
                 </div>
             </div>
         </div>
@@ -34,37 +36,27 @@
 <div class="space-medium">
     <div class="container">
         <div class="row">
-            <!-- post-one-start -->
-            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="post-block">
-                    <div class="post-img">
-                        <a href="blog-single.html" class="imghover"><img src="/images/blog-post-1.jpg" alt="Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                    </div>
-                    <div class="post-sticky"> <i class="fa fa-thumb-tack hidden-xs"></i> </div>
-                    <div class="post-content">
-                        <div>
-                            <h1><a href="blog-single.html" class="post-title">Best Budget Destination for Couple</a></h1>
+            @foreach (var item in Model)
+            {
+                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="post-block">
+                            <div class="post-img" style="object-fit: cover; ">
+                                <a asp-action="Post" asp-route-id="@item.BlogId" class="imghover">
+                                    <img src="/images/@item.Resim" alt="Tour and Travel Agency - Responsive Website Template" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="post-sticky"> <i class="fa fa-thumb-tack hidden-xs"></i> </div>
+                            <div class="post-content">
+                                <div>
+                                    <h1><a asp-action="Post" asp-route-id="@item.BlogId" class="post-title">@item.Baslik</a></h1>
+                                </div>
+                                <div class="meta"> <span class="meta-date">Posted on March 5, 2017 </span> <span class="meta-author">by <a href="#">@item.Admin.Email</a></span> </div>
+                            </div>
                         </div>
-                        <div class="meta"> <span class="meta-date">Posted on March 5, 2017 </span> <span class="meta-author">by <a href="#">Timothy Cooper</a></span> </div>
                     </div>
-                </div>
-            </div>
-            <!-- post-one-close -->
-            <!-- post-one-start -->
-            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="post-block">
-                    <div class="post-img">
-                        <a href="blog-single.html" class="imghover"><img src="/images/blog-post-2.jpg" alt="Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                    </div>
-                    <div class="post-sticky"> <i class="fa fa-play-circle-o hidden-xs"></i> </div>
-                    <div class="post-content">
-                        <div>
-                            <h1><a href="blog-single.html" class="post-title">The Ultimate singapore To Do List</a></h1>
-                        </div>
-                        <div class="meta"> <span class="meta-date">Posted on March 3, 2017 </span> <span class="meta-author">by <a href="#">Timothy Cooper</a></span> </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
+
+<p>Scaffold-DbContext "Server= DESKTOP-9B0C2CB; Database=Blogdb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force</p>

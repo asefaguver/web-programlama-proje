@@ -10,6 +10,7 @@ namespace CoreProje.Models
         public Admin()
         {
             Blogs = new HashSet<Blog>();
+            Yorums = new HashSet<Yorum>();
         }
 
         public int AdminId { get; set; }
@@ -18,5 +19,6 @@ namespace CoreProje.Models
         public string Yetki { get; set; }
 
         public virtual ICollection<Blog> Blogs { get; set; }
+        public virtual ICollection<Yorum> Yorums { get; set; }
     }
 }

@@ -221,3 +221,10 @@ C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programla
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Admins\Login.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Post.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Admins\SignUp.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Yorums\Create.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Yorums\Delete.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Yorums\Details.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Yorums\Edit.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Yorums\Index.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\YiciTour.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\YdisiTour.cshtml.g.cs

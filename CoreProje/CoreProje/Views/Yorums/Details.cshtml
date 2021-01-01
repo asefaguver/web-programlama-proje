@@ -1,0 +1,46 @@
+﻿@model CoreProje.Models.Yorum
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <h2>Details</h2>
+
+        <div>
+            <h4>Yorum</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Yicerik)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Yicerik)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tarih)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Tarih)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Admin)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Admin.AdminId)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Blog)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Blog.BlogId)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.YorumId">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+    </div>

@@ -1,10 +1,11 @@
-﻿@using CoreProje.Models
-@model CoreProje.Models.Blog
+﻿@model CoreProje.Models.BlogYorum
 @{
     ViewData["Title"] = "Post";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/css/style.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6c7bb4439b.js" crossorigin="anonymous"></script>
+
 
 <!-- page-header-start -->
 <div class="page-header">
@@ -38,23 +39,32 @@
         <div class="row">
             <!-- post-one-start -->
             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="post-block">
-                    <div class="post-img"><img src="~/images/blog-post-1.jpg" alt="Tour and Travel Agency - Responsive Website Template" class="img-responsive"></div>
-                    <div class="post-sticky"> <i class="fa fa-thumb-tack"></i> </div>
-                    <div class="post-content">
-                        <div>
-                            <h1 class="post-title">
-                                @Model.Baslik
-                            </h1>
+                @foreach (var x in Model.Deger1)
+                {
+                    <div class="post-block">
+                        <div class="post-img"><img src="~/images/@x.Resim" alt="Tour and Travel Agency - Responsive Website Template" class="img-responsive"></div>
+                        <div class="post-sticky"> <i class="fa fa-thumb-tack"></i> </div>
+                        <div class="post-content">
+                            <div>
+                                <h1 class="post-title">
+                                    @x.Baslik
+                                </h1>
+                            </div>
+                            @*<div class="meta"> <span class="meta-date">Posted on  </span> <span class="meta-author">by x.Admin.Email</span> </div>*@
                         </div>
-                        <div class="meta"> <span class="meta-date">Posted on March 5, 2017 </span> <span class="meta-author">by @Model.Admin.Email</span> </div>
                     </div>
-                </div>
+                }
             </div>
             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 @*<p class="blockquote">"Nullam rutrum viverra leo, et egestas nibh malesuada quis. Nam placerat euismod quam, nec ullamcorper odio. Maecenas feugiat risus sed aliqulentesque aliquet leo eros, quis interdum leo faucibus eget."</p>*@
                 @*<img src="images/side-post.jpg" alt="" class="align-left">*@
-                @Html.Raw(Model.Icerik)
+                @foreach (var item in Model.Deger1)
+                {
+                    @*<p>@item.Icerik</p>*@
+                    @Html.Raw(item.Icerik)
+                }
+                @*Html.Raw(Model.Icerik)*@
+
                 <div class="post-navigation mb30 mt80">
                     <div class="row">
                         <div class="nav-links">
@@ -70,6 +80,82 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!--comments start-->
+                <div class="comment-area">
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12">
+                            <div class="comment-title">
+                                <h2>Comments</h2>
+                                @foreach (var y in Model.Deger2)
+                                {
+                                    <ul class="comment-list">
+                                        <li>
+                                            <div class="comment-author"><i class="fas fa-comment-dots fa-3x"></i></div>
+                                            <div class="comment-info">                                                
+                                                <h4 class="user-title">
+                                                    Admin ID: @y.AdminId | Blog ID: @y.BlogId | Yorum ID: @y.YorumId
+                                                </h4>
+                                                <div class="meta">
+                                                    <div class="comment-meta-date">@y.Tarih</div>
+                                                </div>
+                                                <div class="comment-content">
+                                                    @y.Yicerik
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--comments close-->
+                <div class="leave-comments">
+                    <h2 class="comment-title">Leave A Reply</h2>
+
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="textarea">Comments</label>
+                                    <textarea class="form-control" id="textarea" name="Yicerik" rows="6"></textarea>
+                                </div>
+                            </div>
+                            @*<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input id="email" name="Email" type="email" class="form-control">
+                                    </div>
+                                </div>*@
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Yorum ID </label>
+                                    <input id="email" name="YorumId" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Kullanıcı ID</label>
+                                    <input id="email" name="AdminId" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="email">BlogID</label>
+                                    <input id="email" name="BlogId" type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary btn-sm">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>

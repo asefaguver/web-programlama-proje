@@ -1,0 +1,66 @@
+﻿@using CoreProje.Models
+@model IEnumerable<CoreProje.Models.Blog>
+
+@{
+    ViewData["Title"] = "YdisiTour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/style.css" rel="stylesheet">
+
+<!-- page-header-start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                <div class="page-section">
+                    <h1 class="page-title">Yurtdışı Blogları</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li>Blog</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- page-header-close -->
+<!-- blog-section start -->
+<div class="space-medium">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                @if (item.KategoriId == 2)
+                {
+                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="post-block">
+                            <div class="post-img" style="object-fit: cover; ">
+                                <a asp-action="Post" asp-route-id="@item.BlogId" class="imghover">
+                                    <img src="/images/@item.Resim" alt="Tour and Travel Agency - Responsive Website Template" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="post-sticky"> <i class="fa fa-thumb-tack hidden-xs"></i> </div>
+                            <div class="post-content">
+                                <div>
+                                    <h1><a asp-action="Post" asp-route-id="@item.BlogId" class="post-title">@item.Baslik</a></h1>
+                                </div>
+                                <div class="meta"> <span class="meta-date">Posted on March 5, 2017 </span> <span class="meta-author">by <a href="#">@item.Admin.Email</a></span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            }
+        </div>
+    </div>
+</div>

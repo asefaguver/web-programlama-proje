@@ -54,7 +54,7 @@ namespace CoreProje.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BlogId,KategoriId,Baslik,AdminId,Icerik")] Blog blog)
+        public async Task<IActionResult> Create([Bind("BlogId,KategoriId,Baslik,AdminId,Icerik,Resim")] Blog blog)
         {
             if (ModelState.IsValid)
             {

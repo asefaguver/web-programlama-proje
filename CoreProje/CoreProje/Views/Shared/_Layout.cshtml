@@ -46,9 +46,9 @@
                     </div>
                     <div class="col-md-8 hidden-sm hidden-xs">
                         <div class="social">
-                            <ul>
+                            <ul> 
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                              
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                                 <li><a asp-area="" asp-controller="Admins" asp-action="Logout" style="font-family: 'Open Sans', sans-serif;"><i class="fas fa-sign-out-alt"></i>  Logout</a></li>
@@ -73,19 +73,20 @@
                                         @if (AdminYetki == "aktif")
                                         {
                                             <li class="has-sub">
-                                            <a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
-                                            <ul>
-                                                <li><a asp-area="" asp-controller="Home" asp-action="Category">Category</a> </li>
-                                                <li><a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a></li>
-                                                <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blog</a> </li>
-                                            </ul>
+                                                <a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
+                                                <ul>
+                                                    <li><a asp-area="" asp-controller="Home" asp-action="Category">Category</a> </li>
+                                                    <li><a asp-area="" asp-controller="Yorums" asp-action="Index">Yorum</a> </li>
+                                                    <li><a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a></li>
+                                                    <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blog</a> </li>
+                                                </ul>
                                             </li>
                                         }
                                         <li class="has-sub">
                                             <a asp-area="" asp-controller="Home" asp-action="Tours">Tours</a>
                                             <ul>
-                                                <li><a href="domestic-tour.html" title="Europe Tours">Yurtiçinde Gezilecek Yerler</a></li>
-                                                <li><a href="international-tour.html" title="America Tours">Yurdışında Gezilecek Yerler</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="YiciTour">Yurtiçinde Gezilecek Yerler</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="YdisiTour">Yurtdışında Gezilecek Yerler</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact-us.html" title="Contact Us">Contact Us</a> </li>
