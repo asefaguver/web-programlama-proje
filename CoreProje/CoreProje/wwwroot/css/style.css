@@ -506,6 +506,8 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 .post-title { text-align: left; line-height: 32px; color: #fff; margin-bottom: 20px; display: block; }
 .post-title:hover { color: #f7da3d }
 .post-img img {
+    width: 1140px;
+    height: 500px;
     border-radius: 10px;
 }
 .post-content { position: absolute; bottom: 50px; padding-left: 40px; display: inline-block; }

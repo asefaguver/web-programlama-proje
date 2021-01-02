@@ -302,6 +302,14 @@
         "runtime": {
           "CoreProje.dll": {}
         },
+        "resources": {
+          "en/CoreProje.resources.dll": {
+            "locale": "en"
+          },
+          "tr/CoreProje.resources.dll": {
+            "locale": "tr"
+          }
+        },
         "compile": {
           "CoreProje.dll": {}
         }

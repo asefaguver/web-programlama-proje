@@ -228,3 +228,16 @@ C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programla
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Yorums\Index.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\YiciTour.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\YdisiTour.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\bin\Debug\netcoreapp3.1\en\CoreProje.resources.dll
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.Index.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.csproj.GenerateResource.cache
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\en\CoreProje.resources.dll
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\bin\Debug\netcoreapp3.1\tr\CoreProje.resources.dll
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Controllers.HomeController.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Controllers.HomeController.tr.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.Index.tr.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\tr\CoreProje.resources.dll
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Culture.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Shared._Culture.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Shared._Culture.tr.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutPanel.cshtml.g.cs

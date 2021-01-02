@@ -46,12 +46,12 @@
                     </div>
                     <div class="col-md-8 hidden-sm hidden-xs">
                         <div class="social">
-                            <ul> 
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                              
+                            <ul>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a asp-area="" asp-controller="Admins" asp-action="Logout" style="font-family: 'Open Sans', sans-serif;"><i class="fas fa-sign-out-alt"></i>  Logout</a></li>
+                                <li><partial name="_Culture" /></li>
                             </ul>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                                             <li class="has-sub">
                                                 <a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
                                                 <ul>
-                                                    <li><a asp-area="" asp-controller="Home" asp-action="Category">Category</a> </li>
+                                                    <li><a asp-area="" asp-controller="Home" asp-action="Category">Kategori</a> </li>
                                                     <li><a asp-area="" asp-controller="Yorums" asp-action="Index">Yorum</a> </li>
                                                     <li><a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a></li>
                                                     <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blog</a> </li>
@@ -83,14 +83,13 @@
                                             </li>
                                         }
                                         <li class="has-sub">
-                                            <a asp-area="" asp-controller="Home" asp-action="Tours">Tours</a>
+                                            <a asp-area="" asp-controller="Home" asp-action="Tours">Blog Kategori</a>
                                             <ul>
-                                                <li><a asp-area="" asp-controller="Home" asp-action="YiciTour">Yurtiçinde Gezilecek Yerler</a></li>
-                                                <li><a asp-area="" asp-controller="Home" asp-action="YdisiTour">Yurtdışında Gezilecek Yerler</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="YiciTour">Yurtiçi Bloglar</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="YdisiTour">Yurtdışı Bloglar</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact-us.html" title="Contact Us">Contact Us</a> </li>
-                                        <li><a href="styleguide.html" title="Styleguide">styleguide</a> </li>
+                                        <li><a asp-area="" asp-controller="Admins" asp-action="Logout" style="font-family: 'Open Sans', sans-serif;"><i class="fas fa-sign-out-alt"></i>  Logout</a></li>
                                     </ul>
                                 </div>
                             </div>

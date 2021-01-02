@@ -8,23 +8,29 @@ using Microsoft.Extensions.Logging;
 using CoreProje.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.Localization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Http;
 
 namespace CoreProje.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IHtmlLocalizer<HomeController> _localizer;
         private readonly ILogger<HomeController> _logger;
 
         BlogdbContext c = new BlogdbContext();
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHtmlLocalizer<HomeController> localizer)
         {
             _logger = logger;
-            
+            _localizer = localizer;
         }
 
         public IActionResult Index()
         {
+            var test = _localizer["TopDestinations"];
+            ViewData["TopDestinations"] = test;
             var list = c.Blogs.ToList();
             foreach(var blog in list)
             {
@@ -40,6 +46,15 @@ namespace CoreProje.Controllers
 
         //    return View(blog);
         //}
+
+        [HttpPost]
+        public IActionResult CultureManagement(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName, CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.Now.AddDays(30) });
+            return LocalRedirect(returnUrl);
+        }
+
         BlogYorum by = new BlogYorum();
         public IActionResult Post(int? id) // eski com
         {

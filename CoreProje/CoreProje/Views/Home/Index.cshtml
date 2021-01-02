@@ -1,4 +1,5 @@
-﻿@using CoreProje.Models
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@using CoreProje.Models
 @model IEnumerable<CoreProje.Models.Blog>
 
 @{
@@ -12,8 +13,8 @@
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                 <div class="hero-section-caption pinside40">
-                    <h1 class="hero-title">Discover The Places You’ve Never Been Before</h1>
-                    <a href="/Home/Tours" class="btn btn-primary ">view blogs</a>
+                    <h1 class="hero-title">@localizer["Discover"]</h1>
+                    <a href="/Home/Tours" class="btn btn-primary ">@localizer["viewBlogs"]</a>
                 </div>
             </div>
         </div>
@@ -26,7 +27,8 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="section-title text-center">
-                    <h1>Top Destinations</h1>
+                    <h1>@localizer["TopDestinations"]</h1>
+                    @*<h2>@ViewData["TopDestinations"]</h2>*@
                 </div>
             </div>
         </div>
