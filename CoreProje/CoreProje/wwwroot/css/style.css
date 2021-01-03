@@ -283,7 +283,11 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 .call-text strong { margin-left: 5px; }
 .social { }
 .social ul { float: right; }
-.social ul li { float: left; }
+    .social ul li {
+        float: left;
+        font-size: 13px;
+        padding: 12px 10px;
+    }
 .social ul li a { font-size: 13px; padding: 12px 10px; }
 .header { padding-top: 20px; padding-bottom: 20px; background-color: #fff; }
 .header-wrapper { z-index: 9; background: #fff; position: relative; }

@@ -35,56 +35,28 @@
         <div class="row">
             @foreach (var item in Model)
             {
-                <!-- destination-one-start -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="destination-img">
-                        <a a asp-action="Post" asp-route-id="@item.BlogId" class="imghover">
-                            <img src="/images/@item.Resim" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="destination-content">
-                        <h3>
-                            <a asp-action="Post" asp-route-id="@item.BlogId" class="destination-title">
-                                @item.Baslik
+                @if (item.BlogId <= 3)
+                {
+                    <!-- destination-one-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="destination-img">
+                            <a a asp-action="Post" asp-route-id="@item.BlogId" class="imghover">
+                                <img src="/images/@item.Resim" alt "Tour and Travel - Responsive Website Template" class="img-responsive">
                             </a>
-                        </h3>
+                        </div>
+                        <div class="destination-content">
+                            <h3>
+                                <a asp-action="Post" asp-route-id="@item.BlogId" class="destination-title">
+                                    @item.Baslik
+                                </a>
+                            </h3>
+                        </div>
                     </div>
-                </div>
-                <!-- destination-one-close -->
-            }
-            <!-- destination-two-start -->
-            @*<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="destination-img imghover">
-                        <a href="#" class="imghover"><img src="/images/destination-2.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                    </div>
-                    <div class="destination-content">
-                        <h3><a href="#" class="destination-title">Singapr</a></h3>
-                    </div>
-                </div>*@
-            <!-- destination-two-close -->
-            <!-- destination-three-start -->
-            @*<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="destination-img imghover">
-                        <a href="#"><img src="/images/destination-3.jpg" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                    </div>
-                    <div class="destination-content">
-                        <h3><a href="#" class="destination-title">Thailand</a></h3>
-                    </div>
-                </div>*@
-            <!-- destination-three-close -->
-        </div>
-        @*<table class="table">
-                <thead></thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <a asp-action="Post" asp-route-id="@item.BlogId">
-                            <p>@item.Baslik</p>
-                            <p>@item.Admin.Email</p>
-                        </a>
-                    }
-                </tbody>
-            </table>*@
+                    <!-- destination-one-close -->
 
+                }
+            }
+
+        </div>
     </div>
 </div>

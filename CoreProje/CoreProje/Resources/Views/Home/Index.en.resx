@@ -117,31 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="category" xml:space="preserve">
-    <value>Category</value>
-  </data>
-  <data name="comment" xml:space="preserve">
-    <value>Comment</value>
-  </data>
   <data name="Discover" xml:space="preserve">
     <value>Discover The Places You've Never Been Before</value>
-  </data>
-  <data name="home" xml:space="preserve">
-    <value>Home</value>
   </data>
   <data name="TopDestinations" xml:space="preserve">
     <value>Top Destinations!</value>
   </data>
-  <data name="tours" xml:space="preserve">
-    <value>Blogs</value>
-  </data>
   <data name="viewBlogs" xml:space="preserve">
     <value>View Blogs</value>
-  </data>
-  <data name="ydisi" xml:space="preserve">
-    <value>International Blogs</value>
-  </data>
-  <data name="yici" xml:space="preserve">
-    <value>Domestic Blogs</value>
   </data>
 </root>

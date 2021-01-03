@@ -117,13 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Discover" xml:space="preserve">
-    <value>Daha Önce Hiç Gitmediğiniz Yerleri Keşfedin</value>
+  <data name="adres" xml:space="preserve">
+    <value>54050, Esentepe Campus, University Street, Serdivan / Sakarya</value>
   </data>
-  <data name="TopDestinations" xml:space="preserve">
-    <value>En Popüler Yerler</value>
+  <data name="bcategory" xml:space="preserve">
+    <value>Blog Category</value>
   </data>
-  <data name="viewBlogs" xml:space="preserve">
-    <value>Bloglara Gözat</value>
+  <data name="category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact Info</value>
+  </data>
+  <data name="follow" xml:space="preserve">
+    <value>Follow Us On</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>Our Locations</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="review" xml:space="preserve">
+    <value>Reviews and advice on hotels, resorts, flights, vacation rentals, and lots more in our travel blog</value>
+  </data>
+  <data name="ydisi" xml:space="preserve">
+    <value>International Blogs</value>
+  </data>
+  <data name="yici" xml:space="preserve">
+    <value>Domestic Blogs</value>
+  </data>
+  <data name="yorum" xml:space="preserve">
+    <value>Comment</value>
   </data>
 </root>

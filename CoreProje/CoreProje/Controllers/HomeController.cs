@@ -72,6 +72,7 @@ namespace CoreProje.Controllers
             //}
             by.Deger1 = c.Blogs.Where(x => x.BlogId == id).ToList();
             by.Deger2 = c.Yorums.Where(x => x.BlogId == id).ToList();
+            ViewBag.deger = id;
             return View(by);
         }
         [HttpPost]

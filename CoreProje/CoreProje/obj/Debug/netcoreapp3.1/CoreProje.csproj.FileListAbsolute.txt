@@ -240,4 +240,11 @@ C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programla
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Culture.cshtml.g.cs
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Shared._Culture.en.resources
 C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Shared._Culture.tr.resources
-C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutPanel.cshtml.g.cs
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.Post.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.Post.tr.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.YiciTour.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.YiciTour.tr.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.YdisiTour.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Home.YdisiTour.tr.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Shared._Layout.en.resources
+C:\Users\ahmet sefa\Desktop\örnek kodlar\Web Programlama\WebProje\web-programlama-proje\CoreProje\CoreProje\obj\Debug\netcoreapp3.1\CoreProje.Resources.Views.Shared._Layout.tr.resources

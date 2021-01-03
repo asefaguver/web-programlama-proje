@@ -117,13 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Discover" xml:space="preserve">
-    <value>Daha Önce Hiç Gitmediğiniz Yerleri Keşfedin</value>
+  <data name="blogEntry" xml:space="preserve">
+    <value>Blog Entry</value>
   </data>
-  <data name="TopDestinations" xml:space="preserve">
-    <value>En Popüler Yerler</value>
+  <data name="comments" xml:space="preserve">
+    <value>Comments</value>
   </data>
-  <data name="viewBlogs" xml:space="preserve">
-    <value>Bloglara Gözat</value>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="kullanıcıid" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="reply" xml:space="preserve">
+    <value>Leave a Reply</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="yorumid" xml:space="preserve">
+    <value>Comment ID</value>
   </data>
 </root>

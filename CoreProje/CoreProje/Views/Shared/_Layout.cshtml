@@ -1,9 +1,11 @@
-﻿@using Microsoft.AspNetCore.Http;
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@using Microsoft.AspNetCore.Http;
 
 @{
     int? AdminId = Context.Session.GetInt32("AdminId");
     string AdminYetki = Context.Session.GetString("Yetki");
-    if (!AdminId.HasValue)   // eğer adminin yetkisi varsa ve bilgileri doğruysa siteye girer
+    string mail = Context.Session.GetString("Email");
+    if (!AdminId.HasValue)   // eğer adminin bilgileri doğruysa siteye girer
     {
         Context.Response.Redirect("/Admins/Login");
     }
@@ -17,7 +19,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Want to start your travel agency online and need website for your travel business? Start with travel agency responsive website template. Its absolutely free.">
     <meta name="keywords" content="travel, tour, tourism, honeymoon pacakage, summer trip, exotic vacation, destination, international, domestic website template, holiday, travel agecny responsive website template">
-    <title>Tour and Travel Agency - Responsive Website Template</title>
+    <title>Tour and Travel - Responsive Website Template</title>
     <!-- Bootstrap -->
     <link href="~/css/bootstrap.min.css" rel="stylesheet">
     <!-- Style CSS -->
@@ -40,18 +42,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 hidden-sm col-sm-12">
-                        <div class="call-info">
-                            <p class="call-text">Any Question? Call Us:<strong>543-345-6211</strong></p>
-                        </div>
+                        @*<div class="call-info">
+                                <p class="call-text">Any Question? Call Us:<strong></strong></p>
+                            </div>*@
                     </div>
                     <div class="col-md-8 hidden-sm hidden-xs">
                         <div class="social">
                             <ul>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                                 <li><partial name="_Culture" /></li>
+                                <li><i class="fas fa-user"></i> <strong> @mail</strong> </li>
+
                             </ul>
                         </div>
                     </div>
@@ -69,27 +69,27 @@
                             <div class="navigation">
                                 <div id="navigation">
                                     <ul>
-                                        <li class="active"><a href="/Home/Index">Home</a></li>
-                                        @if (AdminYetki == "aktif")
+                                        <li class="active"><a href="/Home/Index">@localizer["home"]</a></li>
+                                        @if (AdminYetki == "aktif") // Adminin yetkisi varsa admin panelini göster
                                         {
                                             <li class="has-sub">
                                                 <a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
                                                 <ul>
-                                                    <li><a asp-area="" asp-controller="Home" asp-action="Category">Kategori</a> </li>
-                                                    <li><a asp-area="" asp-controller="Yorums" asp-action="Index">Yorum</a> </li>
+                                                    <li><a asp-area="" asp-controller="Home" asp-action="Category">@localizer["category"]</a> </li>
+                                                    <li><a asp-area="" asp-controller="Yorums" asp-action="Index">@localizer["comment"]</a> </li>
                                                     <li><a asp-area="" asp-controller="Admins" asp-action="Index">Admin</a></li>
                                                     <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blog</a> </li>
                                                 </ul>
                                             </li>
                                         }
                                         <li class="has-sub">
-                                            <a asp-area="" asp-controller="Home" asp-action="Tours">Blog Kategori</a>
+                                            <a asp-area="" asp-controller="Home" asp-action="Tours">@localizer["bcategory"]</a>
                                             <ul>
-                                                <li><a asp-area="" asp-controller="Home" asp-action="YiciTour">Yurtiçi Bloglar</a></li>
-                                                <li><a asp-area="" asp-controller="Home" asp-action="YdisiTour">Yurtdışı Bloglar</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="YiciTour">@localizer["yici"]</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="YdisiTour">@localizer["ydisi"]</a></li>
                                             </ul>
                                         </li>
-                                        <li><a asp-area="" asp-controller="Admins" asp-action="Logout" style="font-family: 'Open Sans', sans-serif;"><i class="fas fa-sign-out-alt"></i>  Logout</a></li>
+                                        <li><a asp-area="" asp-controller="Admins" asp-action="Logout" style="font-family: 'Open Sans', sans-serif;"><i class="fas fa-sign-out-alt"></i>  @localizer["logout"]</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -101,9 +101,6 @@
 
     </header>
 
-    @*<div class="container">
-            @RenderBody()
-        </div>*@
     @RenderBody()
 
     <!-- footer start -->
@@ -114,7 +111,7 @@
                 <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="footer-widget">
                         <h3 class="footer-title ">About us</h3>
-                        <p>Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more in our travel agency !</p>
+                        <p>@localizer["review"]</p>
                         <a href="#" class="footer-link">More about us</a>
                     </div>
                 </div>
@@ -122,13 +119,13 @@
                 <!-- footer-location-start -->
                 <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="footer-widget">
-                        <h3 class="footer-title">Our Locations</h3>
+                        <h3 class="footer-title">@localizer["location"]</h3>
                         <ul class="arrow arrow-chevron-circle-right">
-                            <li><a href="#">Ahmedabad</a></li>
-                            <li><a href="#">Mumbai</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">Jamnagar</a></li>
-                            <li><a href="#">Bhuj</a></li>
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">Amsterdam</a></li>
+                            <li><a href="#">Ankara</a></li>
+                            <li><a href="#">Nairobi</a></li>
+                            <li><a href="#">Tokyo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -136,10 +133,10 @@
                 <!-- footer-contact-start -->
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
                     <div class="footer-widget">
-                        <h3 class="footer-title">Contact Info</h3>
+                        <h3 class="footer-title">@localizer["contact"]</h3>
                         <div class="contact-info">
                             <ul>
-                                <li>2867 University Street Ahmedabad, WA 98052</li>
+                                <li>@localizer["adres"]</li>
                                 <li>252-386-7004 </li>
                                 <li>info@yourwebsitedomian.com</li>
                             </ul>
@@ -150,7 +147,7 @@
                 <!-- footer-social-start -->
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12 ">
                     <div class="footer-widget">
-                        <h3 class="footer-title">Follow us on</h3>
+                        <h3 class="footer-title">@localizer["follow"]</h3>
                         <div class="footer-social">
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
