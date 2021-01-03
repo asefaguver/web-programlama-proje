@@ -72,12 +72,6 @@ namespace CoreProje
             app.UseAuthorization();
 
             app.UseRequestLocalization(app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
-            //var supportedCultures = new[] { "tr", "en" };
-            //var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
-            //    .AddSupportedCultures(supportedCultures)
-            //    .AddSupportedUICultures(supportedCultures);
-
-            //app.UseRequestLocalization(localizationOptions);
 
             app.UseSession();
 

@@ -20,7 +20,7 @@ namespace CoreProje.Models
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<Kategori> Kategoris { get; set; }
-        public virtual DbSet<Uye> Uyes { get; set; }
+        //public virtual DbSet<Uye> Uyes { get; set; }
         public virtual DbSet<Yorum> Yorums { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -67,17 +67,6 @@ namespace CoreProje.Models
                 entity.ToTable("Kategori");
 
                 entity.Property(e => e.KategoriId).ValueGeneratedNever();
-            });
-
-            modelBuilder.Entity<Uye>(entity =>
-            {
-                entity.ToTable("Uye");
-
-                entity.Property(e => e.UyeId).ValueGeneratedNever();
-
-                entity.Property(e => e.Email).HasMaxLength(50);
-
-                entity.Property(e => e.Password).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Yorum>(entity =>

@@ -32,20 +32,12 @@ namespace CoreProje.Controllers
             var test = _localizer["TopDestinations"];
             ViewData["TopDestinations"] = test;
             var list = c.Blogs.ToList();
-            foreach(var blog in list)
+            foreach (var blog in list)
             {
                 blog.Admin = c.Admins.Find(blog.AdminId);
             }
             return View(list);
         }
-        //public IActionResult Comment(int? Id)
-        //{           
-
-        //    var blog = c.Blogs.Find(Id);
-        //    blog.Admin = c.Admins.Find(blog.AdminId);
-
-        //    return View(blog);
-        //}
 
         [HttpPost]
         public IActionResult CultureManagement(string culture, string returnUrl)
@@ -62,19 +54,13 @@ namespace CoreProje.Controllers
             {
                 return NotFound();
             }
-            //var yorum = await c.Yorums
-            //    .Include(y => y.Admin)
-            //    .Include(y => y.Blog)
-            //    .FirstOrDefaultAsync(m => m.YorumId == id);
-            //if (yorum == null)
-            //{
-            //    return NotFound();
-            //}
+
             by.Deger1 = c.Blogs.Where(x => x.BlogId == id).ToList();
             by.Deger2 = c.Yorums.Where(x => x.BlogId == id).ToList();
             ViewBag.deger = id;
             return View(by);
         }
+
         [HttpPost]
         public async Task<IActionResult> Post([Bind("YorumId,Yicerik,AdminId,BlogId")] Yorum yorum)
         {
@@ -83,22 +69,13 @@ namespace CoreProje.Controllers
             {
                 c.Add(yorum);
                 await c.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Post));
             }
             ViewData["AdminId"] = new SelectList(c.Admins, "AdminId", "AdminId", yorum.AdminId);
             ViewData["BlogId"] = new SelectList(c.Blogs, "BlogId", "BlogId", yorum.BlogId);
             return View(yorum);
-            //Yorum yeniyorum = new Yorum();
-            //yeniyorum.Yicerik = txt;
-            //yeniyorum.YorumId = id;
-            //yeniyorum.AdminId = AdminId;
-            //yeniyorum.BlogId = BlogId;
-            //yeniyorum.Tarih = DateTime.Now;
-            //c.Add(yeniyorum);
-            //c.SaveChanges();
-            //return View();
-
         }
+
         public IActionResult Category()
         {
             var degerler = c.Kategoris.ToList();

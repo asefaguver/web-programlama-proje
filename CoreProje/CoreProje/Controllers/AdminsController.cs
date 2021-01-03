@@ -61,13 +61,6 @@ namespace CoreProje.Controllers
                 ViewBag.Uyari = "Kullanıcı Adı veya Şifre Hatalı... Tekrar Deneyin...";
             }
             return View();
-            //var author = _context.Admins.FirstOrDefault(x => x.Email == Email && x.Password == Password);
-            //if(author==null)
-            //{
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //HttpContext.Session.SetInt32("id", author.AdminId);
-            //return RedirectToAction(nameof(Index));
         }
         public IActionResult SignUp()
         {
@@ -92,6 +85,7 @@ namespace CoreProje.Controllers
             HttpContext.Session.Clear();
             return Redirect("Index");
         }
+
         // GET: Admins/Create
         public IActionResult Create()
         {
